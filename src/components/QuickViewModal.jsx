@@ -17,12 +17,22 @@ export function QuickViewModal({ product, onClose, onAddToCart }) {
           <h2 id="quick-view-title" className="product-card__name" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
             {product.name}
           </h2>
-          <p className="product-card__desc" style={{ WebkitLineClamp: 'unset', marginBottom: '2rem' }}>
+          <p className="product-card__desc" style={{ WebkitLineClamp: 'unset', marginBottom: '1.5rem', flex: 'none' }}>
             {product.description}
           </p>
+
+          <div style={{ marginBottom: '2rem', padding: '1rem', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--sand-border)', fontSize: '0.85rem' }}>
+            <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-muted)' }}>Artifact Dossier</h4>
+            <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', color: 'var(--charcoal)' }}>
+              <li><strong>Material:</strong> {product.material}</li>
+              <li><strong>Condition:</strong> Museum Grade</li>
+              <li><strong>Origin:</strong> Authenticated</li>
+              <li><strong>Shipping:</strong> Insured & Tracked</li>
+            </ul>
+          </div>
           
-          <div style={{ marginTop: 'auto' }}>
-            <div style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem' }}>
+          <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px dashed var(--sand-muted)', paddingTop: '1.5rem' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--charcoal)' }}>
               {product.price}
             </div>
             <button 

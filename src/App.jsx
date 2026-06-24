@@ -187,8 +187,18 @@ function App() {
       };
     });
     setTimeout(() => {
-      document.getElementById('sidebar-filters')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+      requestAnimationFrame(() => {
+        const el = document.querySelector('.products');
+        if (el) {
+          const headerOffset = 100;
+          const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - headerOffset,
+            behavior: 'smooth'
+          });
+        }
+      });
+    }, 300);
   }, []);
 
   // ── Render ──
@@ -302,14 +312,22 @@ function App() {
 
           <div className="products__grid">
             {sortedProducts.length > 0 ? (
-              sortedProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onAddToCart={addToCart}
-                  onQuickView={setQuickViewProduct}
-                />
-              ))
+              sortedProducts.map((product, index) => {
+                const cartItem = cart.find(item => item.product.id === product.id);
+                const quantity = cartItem ? cartItem.quantity : 0;
+                
+                return (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    index={index}
+                    onAddToCart={addToCart}
+                    onQuickView={setQuickViewProduct}
+                    cartQuantity={quantity}
+                    onUpdateQuantity={updateQuantity}
+                  />
+                );
+              })
             ) : (
               <div className="products__empty">
                 <h3 className="products__empty-title">No Artifacts Found</h3>

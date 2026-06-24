@@ -378,15 +378,17 @@ img {
 }
 
 .hero__content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 10;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 4rem 1.5rem 2rem;
   max-width: 56rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .hero__tag {
@@ -417,12 +419,14 @@ img {
   font-weight: 500;
   color: var(--sand);
   line-height: 1.35;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
   max-width: 48rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero__cta {
+  margin-top: auto;
+  margin-bottom: 2rem;
   background: var(--gold);
   color: var(--sand);
   padding: 1rem 3rem;
@@ -709,6 +713,7 @@ img {
    ================================================ */
 .products {
   flex: 1;
+  scroll-margin-top: calc(var(--header-height) + 40px);
 }
 
 .products__header {

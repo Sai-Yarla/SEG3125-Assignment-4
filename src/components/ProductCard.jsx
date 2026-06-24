@@ -1,6 +1,10 @@
-export function ProductCard({ product, onAddToCart, onQuickView }) {
+export function ProductCard({ product, onAddToCart, onQuickView, cartQuantity = 0, onUpdateQuantity, index = 0 }) {
   return (
-    <article className="product-card" id={`product-${product.id}`}>
+    <article 
+      className="product-card fade-in" 
+      id={`product-${product.id}`}
+      style={{ animationDelay: `${index * 0.05}s` }}
+    >
       {/* Decorative corners */}
       <div className="product-card__corner product-card__corner--tl" aria-hidden="true" />
       <div className="product-card__corner product-card__corner--tr" aria-hidden="true" />
@@ -45,7 +49,33 @@ export function ProductCard({ product, onAddToCart, onQuickView }) {
         <p className="product-card__desc">{product.description}</p>
         <div className="product-card__footer">
           <span className="product-card__price">{product.price}</span>
-          <span className="product-card__acquire">Acquire</span>
+          {cartQuantity > 0 ? (
+            <div className="cart-item__qty" style={{ transform: 'scale(0.85)', transformOrigin: 'right center' }}>
+              <button 
+                className="cart-item__qty-btn" 
+                onClick={(e) => { e.stopPropagation(); onUpdateQuantity(product.id, -1); }}
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+              <span className="cart-item__qty-value">{cartQuantity}</span>
+              <button 
+                className="cart-item__qty-btn" 
+                onClick={(e) => { e.stopPropagation(); onUpdateQuantity(product.id, 1); }}
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+          ) : (
+            <button 
+              className="product-card__acquire" 
+              onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
+              Acquire
+            </button>
+          )}
         </div>
       </div>
     </article>
