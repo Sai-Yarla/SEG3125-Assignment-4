@@ -31,7 +31,7 @@ export function QuickViewModal({ product, onClose, onAddToCart }) {
             </ul>
           </div>
           
-          <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px dashed var(--sand-muted)', paddingTop: '1.5rem' }}>
+          <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', borderTop: '1px dashed var(--sand-muted)', paddingTop: '1.5rem' }}>
             <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--charcoal)' }}>
               {product.price}
             </div>
