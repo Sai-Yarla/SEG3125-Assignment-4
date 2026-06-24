@@ -6,8 +6,7 @@ export const products = [
       'Forged utilizing traditional 12th-century techniques, this replica Norman nasal helm features a 16-gauge steel construction and an authentic leather suspension liner.',
     price: '$285.00',
     numericPrice: 285,
-    imageUrl:
-      'https://images.unsplash.com/photo-1600081728723-c8aa2ee3236a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/helm-01.png',
     era: 'Early Medieval Europe',
     category: 'Armor Replicas',
     material: 'High-Carbon Steel',
@@ -19,8 +18,7 @@ export const products = [
       'An exact 1:1 scale replica of the famous gold Aureus minted during the reign of Augustus, featuring exceptional detail in 24k gold plating over solid brass.',
     price: '$95.00',
     numericPrice: 95,
-    imageUrl:
-      'https://images.unsplash.com/photo-1624295329185-13a841e9a268?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/coin-01.png',
     era: 'Roman Republic',
     category: 'Numismatics',
     material: 'Bronze',
@@ -32,8 +30,7 @@ export const products = [
       'A beautifully balanced arming sword replicating 11th-century designs. Hand-forged high carbon steel blade with a leather-wrapped wooden grip.',
     price: '$450.00',
     numericPrice: 450,
-    imageUrl:
-      'https://images.unsplash.com/photo-1440711085503-89d8ec455791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/sword-01.png',
     era: 'Early Medieval Europe',
     category: 'Weaponry',
     material: 'High-Carbon Steel',
@@ -45,10 +42,9 @@ export const products = [
       'Hand-painted terracotta amphora recreating the iconic black-figure technique of 6th-century BC Athens, depicting heroic mythological scenes.',
     price: '$320.00',
     numericPrice: 320,
-    imageUrl:
-      'https://images.unsplash.com/photo-1728245029370-a47e535921da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/pottery-01.png',
     era: 'Ancient Greece',
-    category: 'Armor Replicas',
+    category: 'Artifacts',
     material: 'Bronze',
   },
   {
@@ -58,8 +54,7 @@ export const products = [
       'Crafted from solid bronze using traditional lost-wax casting methods, this heavy helm perfectly captures the intimidating visage of hoplite warriors.',
     price: '$895.00',
     numericPrice: 895,
-    imageUrl:
-      'https://images.unsplash.com/photo-1590672617986-51b27910db21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/helm-02.png',
     era: 'Ancient Greece',
     category: 'Armor Replicas',
     material: 'Bronze',
@@ -71,8 +66,7 @@ export const products = [
       'A painstaking reproduction of a 14th-century devotional manuscript, hand-lettered on genuine vellum with gold leaf illuminations and rich mineral pigments.',
     price: '$1,250.00',
     numericPrice: 1250,
-    imageUrl:
-      'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/manuscript-01.png',
     era: 'Early Medieval Europe',
     category: 'Manuscripts & Texts',
     material: 'Vellum',
@@ -84,8 +78,7 @@ export const products = [
       'Museum-grade replica of the celebrated Elephant Denarius struck in 49 BC, cast in fine silver-plated bronze with an aged patina finish.',
     price: '$75.00',
     numericPrice: 75,
-    imageUrl:
-      'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/coin-02.png',
     era: 'Roman Republic',
     category: 'Numismatics',
     material: 'Bronze',
@@ -97,8 +90,7 @@ export const products = [
       'An imposing full-size kite shield constructed from laminated hardwood, covered in hand-dyed leather and fitted with a forged iron boss and rim.',
     price: '$385.00',
     numericPrice: 385,
-    imageUrl:
-      'https://images.unsplash.com/photo-1562128753-be051c7c35da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
+    imageUrl: '/images/shield-01.png',
     era: 'Early Medieval Europe',
     category: 'Armor Replicas',
     material: 'Leather',
@@ -110,29 +102,87 @@ export const products = [
       'A scholarly reproduction of a section of the Egyptian Book of the Dead, hand-painted with authentic mineral inks on genuine papyrus reed paper.',
     price: '$180.00',
     numericPrice: 180,
-    imageUrl:
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-    era: 'Roman Republic',
+    imageUrl: '/images/scroll-01.png',
+    era: 'Ancient Egypt',
     category: 'Manuscripts & Texts',
     material: 'Vellum',
   },
   {
     id: 'dagger-01',
-    name: 'Greek Xiphos Short Sword',
+    name: 'Roman Gladius Mainz',
     description:
-      'A faithful reproduction of the leaf-shaped bronze xiphos carried by Greek hoplites, featuring a hand-cast blade and a bone-inlaid wooden grip.',
+      'A classic Roman short sword of the Mainz pattern, favored by legionaries. Features a wide, slightly waisted high-carbon steel blade and a detailed bone hilt.',
     price: '$340.00',
     numericPrice: 340,
-    imageUrl:
-      'https://images.unsplash.com/photo-1589656966895-2f33e7653819?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600',
-    era: 'Ancient Greece',
+    imageUrl: '/images/dagger-01.png',
+    era: 'Roman Republic',
     category: 'Weaponry',
-    material: 'Bronze',
+    material: 'High-Carbon Steel',
   },
+  {
+    id: 'book-01',
+    name: 'SPQR: A History of Ancient Rome',
+    description:
+      'Mary Beard’s sweeping, masterful history of Rome. This academic edition provides a fresh, scholarly perspective on how Rome grew from an insignificant village to a dominant global empire.',
+    price: '$35.00',
+    numericPrice: 35,
+    imageUrl: '/images/book-01.png',
+    era: 'Roman Republic',
+    category: 'Academic Books',
+    material: 'Paper',
+  },
+  {
+    id: 'book-02',
+    name: 'The Decline and Fall of the Roman Empire',
+    description:
+      'Edward Gibbon’s monumental historical work. A beautifully bound, academic-grade multi-volume set perfect for any history student or researcher.',
+    price: '$120.00',
+    numericPrice: 120,
+    imageUrl: '/images/book-02.png',
+    era: 'Roman Republic',
+    category: 'Academic Books',
+    material: 'Paper',
+  },
+  {
+    id: 'jar-01',
+    name: 'Canopic Jar of Neskhons',
+    description:
+      'A highly accurate replica of an Ancient Egyptian canopic jar. Originally used to store the organs of the deceased during the mummification process.',
+    price: '$150.00',
+    numericPrice: 150,
+    imageUrl: '/images/jar-01.png',
+    era: 'Ancient Egypt',
+    category: 'Artifacts',
+    material: 'Ceramic',
+  },
+  {
+    id: 'astrolabe-01',
+    name: 'Renaissance Persian Astrolabe',
+    description:
+      'A stunning brass reproduction of an 18th-century Persian astrolabe, showcasing the incredible advancements in astronomical instrumentation during the Renaissance period.',
+    price: '$420.00',
+    numericPrice: 420,
+    imageUrl: '/images/astrolabe-01.png',
+    era: 'Renaissance',
+    category: 'Instruments',
+    material: 'Brass',
+  },
+  {
+    id: 'book-03',
+    name: 'Oxford Illustrated History of Medieval Europe',
+    description:
+      'Edited by George Holmes, this heavily illustrated volume brings the Middle Ages to life. A definitive text utilized in university programs worldwide.',
+    price: '$45.00',
+    numericPrice: 45,
+    imageUrl: '/images/book-03.png',
+    era: 'Early Medieval Europe',
+    category: 'Academic Books',
+    material: 'Paper',
+  }
 ];
 
 export const filterOptions = {
-  era: ['Roman Republic', 'Ancient Greece', 'Early Medieval Europe'],
-  category: ['Manuscripts & Texts', 'Armor Replicas', 'Numismatics', 'Weaponry'],
-  material: ['Bronze', 'Leather', 'Vellum', 'High-Carbon Steel'],
+  era: ['Roman Republic', 'Ancient Greece', 'Early Medieval Europe', 'Renaissance', 'Ancient Egypt'],
+  category: ['Academic Books', 'Armor Replicas', 'Artifacts', 'Instruments', 'Manuscripts & Texts', 'Numismatics', 'Weaponry'],
+  material: ['Brass', 'Bronze', 'Ceramic', 'High-Carbon Steel', 'Leather', 'Paper', 'Vellum'],
 };
