@@ -1,16 +1,59 @@
-# React + Vite
+# Antiquity Archives E-commerce Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to the **Antiquity Archives E-commerce Prototype**. This project is a modern, responsive React web application that showcases a curated collection of historical artifacts. It provides an intuitive browsing experience with robust filtering, smooth scrolling, and a complete multi-step checkout flow.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Storefront & Curated Artifacts
+![Storefront Screenshot](public/screenshot.png)
 
-## React Compiler
+*(You can capture more screenshots and place them in the `public/` directory, then update these links!)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the Oxlint configuration
+- **Dynamic Storefront**: Browse historical artifacts using responsive product cards.
+- **Advanced Filtering & Sorting**: Filter items by era, category, material, and maximum price. Sort by featured, price, or name.
+- **Search**: Quickly find specific artifacts by name, description, era, or category.
+- **Smooth Navigation**: Click "Claim Your Piece" in the hero banner to smoothly scroll to the product list.
+- **Shopping Cart**: Add, remove, and adjust the quantity of items directly from the catalog.
+- **Quick View & Modals**: View product details quickly without leaving the current page.
+- **Multi-Step Checkout**: A beautifully designed checkout flow encompassing Cart, Shipping Details, Secure Payment, and Order Confirmation.
+- **Post-Purchase Survey**: A styled, interactive modal collecting user feedback.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠 Technology Stack
+
+- **React 19**: Modern UI component architecture.
+- **Vite**: Ultra-fast development server and optimized build tool.
+- **Vanilla CSS**: Custom styling with CSS Variables, Flexbox, and Grid for a highly tailored aesthetic and animations.
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js (version 18+)
+- npm or yarn
+
+### Installation & Running Locally
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open the application:**
+   Navigate to [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 📝 Usage
+
+- Browse the collection and try out the sidebar filters to find specific artifacts.
+- Adjust quantities in the cart or on the product cards.
+- Complete a test checkout process to see the different steps.
+
+---
+
+*Developed for SEG3125 - Assignment 4.*
