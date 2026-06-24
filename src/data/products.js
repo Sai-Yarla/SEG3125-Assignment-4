@@ -10,6 +10,8 @@ export const products = [
     era: 'Early Medieval Europe',
     category: 'Armor Replicas',
     material: 'High-Carbon Steel',
+    origin: 'Normandy',
+    condition: 'Pristine',
   },
   {
     id: 'coin-01',
@@ -22,6 +24,8 @@ export const products = [
     era: 'Roman Republic',
     category: 'Numismatics',
     material: 'Bronze',
+    origin: 'Rome',
+    condition: 'Museum Quality',
   },
   {
     id: 'sword-01',
@@ -34,6 +38,8 @@ export const products = [
     era: 'Early Medieval Europe',
     category: 'Weaponry',
     material: 'High-Carbon Steel',
+    origin: 'London',
+    condition: 'Aged',
   },
   {
     id: 'pottery-01',
@@ -46,6 +52,8 @@ export const products = [
     era: 'Ancient Greece',
     category: 'Artifacts',
     material: 'Bronze',
+    origin: 'Athens',
+    condition: 'Restored',
   },
   {
     id: 'helm-02',
@@ -58,6 +66,8 @@ export const products = [
     era: 'Ancient Greece',
     category: 'Armor Replicas',
     material: 'Bronze',
+    origin: 'Athens',
+    condition: 'Museum Quality',
   },
   {
     id: 'manuscript-01',
@@ -70,6 +80,8 @@ export const products = [
     era: 'Early Medieval Europe',
     category: 'Manuscripts & Texts',
     material: 'Vellum',
+    origin: 'Paris',
+    condition: 'Pristine',
   },
   {
     id: 'coin-02',
@@ -82,6 +94,8 @@ export const products = [
     era: 'Roman Republic',
     category: 'Numismatics',
     material: 'Bronze',
+    origin: 'Rome',
+    condition: 'Aged',
   },
   {
     id: 'shield-01',
@@ -94,6 +108,8 @@ export const products = [
     era: 'Early Medieval Europe',
     category: 'Armor Replicas',
     material: 'Leather',
+    origin: 'Scandinavia',
+    condition: 'Restored',
   },
   {
     id: 'scroll-01',
@@ -106,6 +122,8 @@ export const products = [
     era: 'Ancient Egypt',
     category: 'Manuscripts & Texts',
     material: 'Vellum',
+    origin: 'Egypt',
+    condition: 'Fragment',
   },
   {
     id: 'dagger-01',
@@ -118,6 +136,8 @@ export const products = [
     era: 'Roman Republic',
     category: 'Weaponry',
     material: 'High-Carbon Steel',
+    origin: 'Rome',
+    condition: 'Pristine',
   },
   {
     id: 'book-01',
@@ -130,6 +150,8 @@ export const products = [
     era: 'Roman Republic',
     category: 'Academic Books',
     material: 'Paper',
+    origin: 'London',
+    condition: 'Mint',
   },
   {
     id: 'book-02',
@@ -142,6 +164,8 @@ export const products = [
     era: 'Roman Republic',
     category: 'Academic Books',
     material: 'Paper',
+    origin: 'London',
+    condition: 'Aged',
   },
   {
     id: 'jar-01',
@@ -154,6 +178,8 @@ export const products = [
     era: 'Ancient Egypt',
     category: 'Artifacts',
     material: 'Ceramic',
+    origin: 'Egypt',
+    condition: 'Museum Quality',
   },
   {
     id: 'astrolabe-01',
@@ -166,6 +192,8 @@ export const products = [
     era: 'Renaissance',
     category: 'Instruments',
     material: 'Brass',
+    origin: 'Persia',
+    condition: 'Museum Quality',
   },
   {
     id: 'book-03',
@@ -178,6 +206,8 @@ export const products = [
     era: 'Early Medieval Europe',
     category: 'Academic Books',
     material: 'Paper',
+    origin: 'London',
+    condition: 'Mint',
   }
 ];
 
@@ -185,4 +215,6 @@ export const filterOptions = {
   era: ['Roman Republic', 'Ancient Greece', 'Early Medieval Europe', 'Renaissance', 'Ancient Egypt'],
   category: ['Academic Books', 'Armor Replicas', 'Artifacts', 'Instruments', 'Manuscripts & Texts', 'Numismatics', 'Weaponry'],
   material: ['Brass', 'Bronze', 'Ceramic', 'High-Carbon Steel', 'Leather', 'Paper', 'Vellum'],
+  origin: ['Athens', 'Egypt', 'London', 'Normandy', 'Paris', 'Persia', 'Rome', 'Scandinavia'],
+  condition: ['Aged', 'Fragment', 'Mint', 'Museum Quality', 'Pristine', 'Restored'],
 };

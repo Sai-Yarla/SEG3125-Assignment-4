@@ -30,6 +30,8 @@ function App() {
     era: [],
     category: [],
     material: [],
+    origin: [],
+    condition: [],
     maxPrice: 2000,
   });
   const [searchQuery, setSearchQuery] = useState('');
@@ -113,6 +115,16 @@ function App() {
       return false;
     }
 
+    // Origin filter
+    if (filters.origin.length > 0 && !filters.origin.includes(product.origin)) {
+      return false;
+    }
+
+    // Condition filter
+    if (filters.condition.length > 0 && !filters.condition.includes(product.condition)) {
+      return false;
+    }
+
     // Price range
     if (product.numericPrice > filters.maxPrice) {
       return false;
@@ -173,7 +185,7 @@ function App() {
   }, []);
 
   const clearFilters = useCallback(() => {
-    setFilters({ era: [], category: [], material: [], maxPrice: 2000 });
+    setFilters({ era: [], category: [], material: [], origin: [], condition: [], maxPrice: 2000 });
     setSearchQuery('');
   }, []);
 

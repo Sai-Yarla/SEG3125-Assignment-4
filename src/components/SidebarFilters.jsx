@@ -76,6 +76,8 @@ export function SidebarFilters({ filters, onFilterChange, onClear }) {
     filters.era.length > 0 ||
     filters.category.length > 0 ||
     filters.material.length > 0 ||
+    filters.origin.length > 0 ||
+    filters.condition.length > 0 ||
     filters.maxPrice < 2000;
 
   const fillPercent = (filters.maxPrice / 2000) * 100;
@@ -112,6 +114,22 @@ export function SidebarFilters({ filters, onFilterChange, onClear }) {
         options={filterOptions.material}
         selected={filters.material}
         onToggle={(val) => onFilterChange('material', val)}
+        defaultOpen={false}
+      />
+
+      <FilterGroup
+        title="Origin"
+        options={filterOptions.origin}
+        selected={filters.origin}
+        onToggle={(val) => onFilterChange('origin', val)}
+        defaultOpen={false}
+      />
+
+      <FilterGroup
+        title="Condition"
+        options={filterOptions.condition}
+        selected={filters.condition}
+        onToggle={(val) => onFilterChange('condition', val)}
         defaultOpen={false}
       />
 
