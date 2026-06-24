@@ -25,8 +25,8 @@ export function QuickViewModal({ product, onClose, onAddToCart }) {
             <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem', color: 'var(--text-muted)' }}>Artifact Dossier</h4>
             <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', color: 'var(--charcoal)' }}>
               <li><strong>Material:</strong> {product.material}</li>
-              <li><strong>Condition:</strong> Museum Grade</li>
-              <li><strong>Origin:</strong> Authenticated</li>
+              <li><strong>Condition:</strong> {product.condition || 'Museum Grade'}</li>
+              <li><strong>Origin:</strong> {product.origin || 'Authenticated'}</li>
               <li><strong>Shipping:</strong> Insured & Tracked</li>
             </ul>
           </div>
