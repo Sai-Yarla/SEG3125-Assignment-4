@@ -78,9 +78,8 @@ export function SidebarFilters({ filters, onFilterChange, onClear }) {
     filters.material.length > 0 ||
     filters.origin.length > 0 ||
     filters.condition.length > 0 ||
-    filters.maxPrice < 2000;
-
-  const fillPercent = (filters.maxPrice / 2000) * 100;
+    filters.priceRange[0] > 0 ||
+    filters.priceRange[1] < 2000;
 
   return (
     <aside className="sidebar" id="sidebar-filters" aria-label="Filter products">
@@ -140,21 +139,46 @@ export function SidebarFilters({ filters, onFilterChange, onClear }) {
         </div>
         <div className="price-slider">
           <div className="price-slider__labels">
-            <span>$0</span>
-            <span>${filters.maxPrice.toLocaleString()}</span>
+            <span>${filters.priceRange[0]}</span>
+            <span>${filters.priceRange[1]}</span>
           </div>
-          <input
-            type="range"
-            className="price-slider__input"
-            min="50"
-            max="2000"
-            step="25"
-            value={filters.maxPrice}
-            onChange={(e) => onFilterChange('maxPrice', Number(e.target.value))}
-            aria-label="Maximum price"
-            id="price-slider"
-            style={{ '--fill-percent': `${fillPercent}%` }}
-          />
+          <div className="price-slider__dual-container">
+            <div className="price-slider__track">
+              <div 
+                className="price-slider__fill" 
+                style={{ 
+                  left: `${(filters.priceRange[0] / 2000) * 100}%`, 
+                  right: `${100 - (filters.priceRange[1] / 2000) * 100}%` 
+                }} 
+              />
+            </div>
+            <input
+              type="range"
+              className="price-slider__input"
+              min="0"
+              max="2000"
+              step="25"
+              value={filters.priceRange[0]}
+              onChange={(e) => {
+                const val = Math.min(Number(e.target.value), filters.priceRange[1] - 25);
+                onFilterChange('priceRange', [val, filters.priceRange[1]]);
+              }}
+              aria-label="Minimum price"
+            />
+            <input
+              type="range"
+              className="price-slider__input"
+              min="0"
+              max="2000"
+              step="25"
+              value={filters.priceRange[1]}
+              onChange={(e) => {
+                const val = Math.max(Number(e.target.value), filters.priceRange[0] + 25);
+                onFilterChange('priceRange', [filters.priceRange[0], val]);
+              }}
+              aria-label="Maximum price"
+            />
+          </div>
         </div>
       </div>
     </aside>

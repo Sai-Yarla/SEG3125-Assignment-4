@@ -32,7 +32,7 @@ function App() {
     material: [],
     origin: [],
     condition: [],
-    maxPrice: 2000,
+    priceRange: [0, 2000],
   });
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('featured');
@@ -126,7 +126,7 @@ function App() {
     }
 
     // Price range
-    if (product.numericPrice > filters.maxPrice) {
+    if (product.numericPrice < filters.priceRange[0] || product.numericPrice > filters.priceRange[1]) {
       return false;
     }
 
@@ -173,8 +173,8 @@ function App() {
   // ── Filter Handlers ──
   const handleFilterChange = useCallback((filterType, value) => {
     setFilters((prev) => {
-      if (filterType === 'maxPrice') {
-        return { ...prev, maxPrice: value };
+      if (filterType === 'priceRange') {
+        return { ...prev, priceRange: value };
       }
       const current = prev[filterType];
       const updated = current.includes(value)
@@ -185,7 +185,7 @@ function App() {
   }, []);
 
   const clearFilters = useCallback(() => {
-    setFilters({ era: [], category: [], material: [], origin: [], condition: [], maxPrice: 2000 });
+    setFilters({ era: [], category: [], material: [], origin: [], condition: [], priceRange: [0, 2000] });
     setSearchQuery('');
   }, []);
 
