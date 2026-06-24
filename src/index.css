@@ -177,6 +177,10 @@ img {
   transform: translateY(-50%);
   color: var(--text-muted);
   pointer-events: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__search-input {
